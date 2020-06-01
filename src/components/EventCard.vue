@@ -6,8 +6,7 @@
         <h4 class="title">{{ event.title }}</h4>
         <span>"{{ event.description }}" organized by {{ event.organizer }}</span>
         <BaseButton>
-            <span slot="emoji">😋</span>
-            <span slot="sad-emoji">😢</span>
+           <span>Details</span>
             </BaseButton>
 <!--        <div v-for="(attendy, idx) in event.attendees" :key="idx">-->
 <!--            <span>{{ attendy.name }}</span>-->
