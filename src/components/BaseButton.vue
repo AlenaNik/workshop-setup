@@ -1,13 +1,12 @@
 <template>
-    <div class="btn">
-       <slot name="emoji"></slot>
-       <slot name="sad-emoji"></slot>
+    <div class="btn" @click="myClick">
+        <slot></slot>
     </div>
 </template>
 
 <script>
     export default {
-
+        props: ['myClick']
     }
 </script>
 

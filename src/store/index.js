@@ -4,8 +4,14 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
+  state: {
+    emoji: []
+  },
+  mutations: {
+    INCREMENT_EMOJI(state, value) {
+      state.emoji.push(value)
+    }
+  },
   actions: {},
   modules: {}
 })

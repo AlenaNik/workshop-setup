@@ -4,6 +4,7 @@ import EventCreate from '../views/EventCreate'
 import EventList from '../views/EventList'
 import EventShow from '../views/EventShow'
 import NotFoundPage from '../views/NotFoundPage'
+import Home from '../views/Home'
 
 Vue.use(VueRouter);
 
@@ -12,6 +13,11 @@ const routes = [
     path: '/',
     name: 'event-list',
     component: EventList
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: Home
   },
   {
     path: '/event/:id',
