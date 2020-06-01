@@ -1,12 +1,12 @@
 <template>
-    <div class="btn" @click="myClick">
+    <div class="btn">
         <slot></slot>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['myClick']
+
     }
 </script>
 

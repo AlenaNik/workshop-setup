@@ -5,6 +5,16 @@
                    :key="idx"
                    :event="event"
         />
+        <template v-if="page != 1">
+            <router-link :to="{name: 'event-list', query: { page: page - 1}}" rel="prev">Prev page  |</router-link>
+        </template>
+        <template v-if="hasNextPage">
+            |
+        </template>
+        <router-link
+                v-if="hasNextPage"
+                :to="{name: 'event-list', query: { page: page + 1}}" rel="next">Next page</router-link>
+
     </div>
 </template>
 
@@ -16,9 +26,21 @@
             EventCard
         },
         created() {
-            this.$store.dispatch('fetchEvents')
+            this.perPage = 3
+            this.$store.dispatch('fetchEvents', {
+                page: this.page,
+                perPage: this.perPage
+            })
         },
-        computed: mapState(['events'])
+        computed: {
+            page() {
+                return parseInt(this.$route.query.page) || 1
+            },
+            hasNextPage() {
+                return this.eventsTotal > this.page * this.perPage
+            },
+            ...mapState(['events', 'eventsTotal'])
+        }
     }
 </script>
 
