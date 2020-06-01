@@ -12,6 +12,12 @@ export default new Vuex.Store({
       state.emoji.push(value)
     }
   },
-  actions: {},
+  actions: {
+    updateEmoji({state, commit}, value) {
+      if(state.emoji) {
+        commit('INCREMENT_EMOJI', value)
+      }
+    }
+  },
   modules: {}
 })

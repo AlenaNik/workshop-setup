@@ -15,7 +15,7 @@
         },
         methods: {
             incrementEmoji() {
-                this.$store.commit('INCREMENT_EMOJI', this.incrementBy)
+                this.$store.dispatch('updateEmoji', this.incrementBy)
             }
         }
     }
