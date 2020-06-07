@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <NotificationContainer/>
     <div id="nav">
       <Navbar/>
     </div>
@@ -9,9 +10,11 @@
 
 <script>
   import Navbar from './components/Navbar';
+  import NotificationContainer from './components/NotificationContainer'
   export default {
     components: {
-      Navbar
+      Navbar,
+      NotificationContainer
     }
   }
 </script>

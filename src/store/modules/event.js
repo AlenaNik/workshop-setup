@@ -22,20 +22,36 @@ export const mutations = {
         }
 }
 export const actions  = {
-        createEvent({commit}, event) {
+        createEvent({commit, dispatch}, event) {
             return EventService.postEvent(event).then(() => {
                 commit('ADD_EVENT', event)
+                        const notification = {
+                            type: 'success',
+                            message: 'The event has been created'
+                        }
+                        dispatch('notification/add', notification, {root: true})
+            }).catch(err => {
+                const notification = {
+                    type: 'error',
+                    message: 'There was a problem submitting event: ' + err.message
+                }
+                dispatch('notification/add', notification, {root: true})
+                throw err
             })
         },
-        fetchEvents({commit}, {perPage, page}) {
+        fetchEvents({commit, dispatch }, {perPage, page}) {
             EventService.getEvents(perPage, page).then(res => {
                 commit('SET_EVENTS', res.data)
                 commit('SET_TOTAL_EVENTS', parseInt(res.headers['x-total-count']))
             }).catch(err => {
-                console.error(err)
+                const notification = {
+                    type: 'error',
+                    message: 'There was a problem fetching events: ' + err.message
+                }
+                dispatch('notification/add', notification, {root: true})
             })
         },
-        fetchIndividualEvent({commit, getters}, id) {
+        fetchIndividualEvent({commit, dispatch, getters}, id) {
             let event = getters.getEventById(id)
             if (event) {
                 commit('SET_INDIVIDUAL_EVENT', event)
@@ -44,7 +60,11 @@ export const actions  = {
                     commit('SET_INDIVIDUAL_EVENT', res.data)
                 })
                     .catch(err => {
-                        console.error(err)
+                        const notification = {
+                            type: 'error',
+                            message: 'There was a problem fetching event: ' + err.message
+                        }
+                        dispatch('add', notification, {root: true})
                     })
             }
         }

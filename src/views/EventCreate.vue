@@ -63,9 +63,10 @@ import EventService from '../services/EventService'
                           params: {id: this.event.id}
                       })
                   this.event = this.createFreshEventObject()
-              }).catch(err => {
-                  console.log('there is has been an error with a form')
-              })
+              }).catch(() => {
+
+                }
+              )
             },
             createFreshEventObject() {
                 const user = this.$store.state.user.user

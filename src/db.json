@@ -221,6 +221,141 @@
       "date": "2020-06-13T16:06:00.000Z",
       "time": "11:00",
       "attendees": []
+    },
+    {
+      "id": 45860847,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "housing",
+      "organizer": "Adam",
+      "title": ",m,n",
+      "description": ",mnm,n",
+      "location": "ewrwer",
+      "date": "2020-06-16T12:19:00.000Z",
+      "time": "10:00",
+      "attendees": []
+    },
+    {
+      "id": 92194204,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "education",
+      "organizer": "Adam",
+      "title": "werwerwer",
+      "description": "werwer",
+      "location": "rerwer",
+      "date": "2020-06-05T12:22:00.000Z",
+      "time": "4:00",
+      "attendees": []
+    },
+    {
+      "id": 44053390,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "food",
+      "organizer": "Adam",
+      "title": "sdasd",
+      "description": "asdasd",
+      "location": "dasdad",
+      "date": "2020-06-04T12:29:00.000Z",
+      "time": "10:00",
+      "attendees": []
+    },
+    {
+      "id": 45330731,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "education",
+      "organizer": "Adam",
+      "title": "hghj",
+      "description": "jghjfg",
+      "location": "erwtw",
+      "date": "2020-06-03T12:59:00.000Z",
+      "time": "10:00",
+      "attendees": []
+    },
+    {
+      "id": 88136572,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "housing",
+      "organizer": "Adam",
+      "title": "rwerwer",
+      "description": "werwerwer",
+      "location": "rwrwerwee",
+      "date": "2020-06-06T13:00:00.000Z",
+      "time": "6:00",
+      "attendees": []
+    },
+    {
+      "id": 14144537,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "community",
+      "organizer": "Adam",
+      "title": "hgdfgh",
+      "description": "rterter",
+      "location": "werwerwe",
+      "date": "2020-06-04T13:02:00.000Z",
+      "time": "10:00",
+      "attendees": []
+    },
+    {
+      "id": 1270264,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "community",
+      "organizer": "Adam",
+      "title": "tertwr",
+      "description": "rtwret",
+      "location": "retert",
+      "date": "2020-06-06T13:03:00.000Z",
+      "time": "16:00",
+      "attendees": []
+    },
+    {
+      "id": 10980190,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "animal welfare",
+      "organizer": "Adam",
+      "title": "hfghgf",
+      "description": "ghfghgfh",
+      "location": "yrtytr",
+      "date": "2020-06-02T13:14:00.000Z",
+      "time": "6:00",
+      "attendees": []
+    },
+    {
+      "id": 50655133,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "housing",
+      "organizer": "Adam",
+      "title": "hfghgf",
+      "description": "hgffgh",
+      "location": "fghfgh",
+      "date": "2020-06-20T13:15:00.000Z",
+      "time": "19:00",
+      "attendees": []
     }
   ]
 }
