@@ -15,6 +15,9 @@ import { mapActions } from 'vuex'
     mounted() {
         this.timeout = setTimeout(() => this.remove(this.notification), 5000)
     },
+    beforeDestroy() {
+        clearTimeout(this.timeout)
+     },
     props: {
         notification: {
             type: Object,
