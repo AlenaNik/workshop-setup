@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h1>Event List</h1>
-        <EventCard v-for="(event, idx) in events"
+        <h1>Event for {{ user.user.name }}</h1>
+        <EventCard v-for="(event, idx) in event.events"
                    :key="idx"
                    :event="event"
         />
@@ -37,9 +37,9 @@
                 return parseInt(this.$route.query.page) || 1
             },
             hasNextPage() {
-                return this.eventsTotal > this.page * this.perPage
+                return this.event.eventsTotal > this.page * this.perPage
             },
-            ...mapState(['events', 'eventsTotal'])
+            ...mapState(['event', 'user'])
         }
     }
 </script>

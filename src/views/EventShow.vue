@@ -14,7 +14,9 @@
            this.$store.dispatch('fetchIndividualEvent', this.id)
        },
         computed: {
-            ...mapState(['event'])
+            ...mapState({
+                event: state => state.event.event
+            })
         }
     }
 </script>
