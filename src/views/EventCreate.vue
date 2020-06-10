@@ -11,15 +11,24 @@
             v-model="event.title"
             placeholder="Title"
             type="text"
+            class="field"
             ></BaseInput>
             <div class="field">
-                <label>Description</label>
-                <input v-model="event.description" type="text" placeholder="Add an event description"/>
+                <BaseInput label="Description"
+                           v-model="event.description"
+                           placeholder="Add an event description"
+                           type="text"
+                           class="field"
+                ></BaseInput>
             </div>
             <h3>Where is your event?</h3>
             <div class="field">
-                <label>Location</label>
-                <input v-model="event.location" type="text" placeholder="Add a location"/>
+                <BaseInput label="Location"
+                           v-model="event.location"
+                           placeholder="Add a location"
+                           type="text"
+                           class="field"
+                ></BaseInput>
             </div>
             <h3>When is your event?</h3>
             <div class="field">
