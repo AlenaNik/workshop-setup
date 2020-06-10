@@ -7,10 +7,11 @@
                 <option v-for="cat in categories" :key="cat">{{ cat }}</option>
             </select>
             <h3>Describe your event</h3>
-            <div class="field">
-                <label>Title</label>
-                <input v-model="event.title" type="text" placeholder="Add an event title"/>
-            </div>
+            <BaseInput label="Title"
+            v-model="event.title"
+            placeholder="Title"
+            type="text"
+            ></BaseInput>
             <div class="field">
                 <label>Description</label>
                 <input v-model="event.description" type="text" placeholder="Add an event description"/>
@@ -39,6 +40,7 @@
 <script>
 import Datepicker from 'vuejs-datepicker'
 import EventService from '../services/EventService'
+import BaseInput from '../components/BaseInput.vue';
     export default {
         data() {
             const times = []
@@ -52,7 +54,8 @@ import EventService from '../services/EventService'
             }
         },
         components: {
-            Datepicker
+            Datepicker,
+            BaseInput
         },
         methods: {
             createEvent() {
