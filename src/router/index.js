@@ -6,6 +6,7 @@ import EventShow from '../views/EventShow'
 import NotFoundPage from '../views/NotFoundPage'
 import Home from '../views/Home'
 import store from '../store/index'
+import NetworkError from "../views/NetworkError";
 
 Vue.use(VueRouter);
 
@@ -32,12 +33,14 @@ const routes = [
             routeTo.params.event = event
             next()
           })
-          .catch(() => next({
-            name: 'NotFoundPage',
-            params: {
-              resource: 'event'
-            }
-          }))
+          .catch(error => {
+              if (error.response && error.response.status == 404) {
+                next({ name: '404', params: {resource: 'event'}})
+                // HERE CAN GO MORE ERROR HANDLERS
+              } else if (error.response && error.response.status == 500) {
+                next({ name: 'network-issue'})
+              }
+          })
     }
   },
   {
@@ -54,6 +57,11 @@ const routes = [
     name: '404',
     component: NotFoundPage,
     props: true
+  },
+  {
+    path: '/network-issue',
+    name: 'network-issue',
+    component: NetworkError
   }
 ]
 
